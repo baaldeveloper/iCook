@@ -1,0 +1,58 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Quiche Lorraine
+  cooking_time: 30
+  difficulty: 1
+  rest_time: 30
+  preparation_time: 20
+
+wrong_cooking_time:
+  name: Recipe_name_1
+  cooking_time: 5.16
+  difficulty: 3
+  rest_time: 15
+  preparation_time: 16
+  
+wrong_rest_time:
+  name: Recipe_name_2
+  cooking_time: 0
+  difficulty: 3
+  rest_time: 0.5
+  preparation_time: 14
+
+wrong_preparation_time:
+  name: Recipe_name_3
+  cooking_time: 0
+  difficulty: 3
+  rest_time: 20
+  preparation_time: 0
+  
+float_preparation_time:
+  name: Recipe_name_4
+  cooking_time: 0
+  difficulty: 3
+  rest_time: 20
+  preparation_time: 1.50
+
+difficulty_more_than_5:
+  name: Recipe_name_5
+  cooking_time: 0
+  difficulty: 8
+  rest_time: 20
+  preparation_time: 30
+
+difficulty_less_than_1:
+  name: Recipe_name_6
+  cooking_time: 0
+  difficulty: 0
+  rest_time: 20
+  preparation_time: 30
+  
+name_too_short:
+  name: name
+  cooking_time: 0
+  difficulty: 0
+  rest_time: 15
+  preparation_time: 30
+
