@@ -1,37 +1,59 @@
-<%= form_for(@recipe) do |f| %>
-  <% if @recipe.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+<%= form_for @recipe, :html => { :class => "form-horizontal recipe" } do |f| %>
 
-      <ul>
-      <% @recipe.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <% if @recipe.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @recipe.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipe[:name]) %>
   </div>
-  <div class="field">
-    <%= f.label :cooking_time %><br>
-    <%= f.number_field :cooking_time %>
+  <div class="control-group">
+    <%= f.label :cooking_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cooking_time, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipe[:cooking_time]) %>
   </div>
-  <div class="field">
-    <%= f.label :difficulty %><br>
-    <%= f.number_field :difficulty %>
+  <div class="control-group">
+    <%= f.label :difficulty, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :difficulty, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipe[:difficulty]) %>
   </div>
-  <div class="field">
-    <%= f.label :rest_time %><br>
-    <%= f.number_field :rest_time %>
+  <div class="control-group">
+    <%= f.label :rest_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :rest_time, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipe[:rest_time]) %>
   </div>
-  <div class="field">
-    <%= f.label :preparation_time %><br>
-    <%= f.number_field :preparation_time %>
+  <div class="control-group">
+    <%= f.label :preparation_time, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :preparation_time, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipe[:preparation_time]) %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            recipes_path, :class => 'btn btn-default' %>
+
 <% end %>

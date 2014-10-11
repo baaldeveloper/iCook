@@ -1,13 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  substance: MyString
+milk:
+  substance: Milk
   quantity: 0.00
-  quantity_unit: MyString
+  quantity_unit: liter
   recipe_id: 1
 
-two:
-  substance: MyString
+oil:
+  substance: Oil
   quantity: 9.99
-  quantity_unit: MyString
+  quantity_unit: teaspoon
+  recipe_id: 1
+
+fish:
+  substance: Fish
+  quantity: 0.7
+  quantity_unit: kilogram
   recipe_id: 1

@@ -4,9 +4,9 @@ source 'https://rubygems.org'
 #gem 'libv8', '~> 3.11.8.17'
 
 
-#gem 'therubyracer', :platform => :ruby
-#gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-#gem "twitter-bootstrap-rails" #, :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'therubyracer', :platform => :ruby
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails" #, :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
@@ -43,8 +43,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'debugger', group: [:development, :test]
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin]
+#gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'unitwise'
-
-

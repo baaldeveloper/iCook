@@ -9,7 +9,9 @@ require 'unitwise'
 require 'unitwise/ext'
 
 class Ingredient < ActiveRecord::Base
-  
+  validates :substance, presence: true
+  validates :quantity, numericality: { :greater_than => 0.00 }
+  validates :quantity_unit, presence: true
 
   def quantity
     read_attribute(:quantity).convert_to(self.quantity_unit)
